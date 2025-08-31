@@ -338,9 +338,9 @@ p {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 3rem;
-    max-width: 200%;
+    max-width: 100%;
 }
 
 .project-card {
@@ -945,7 +945,13 @@ p {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .project-card {
+        min-height: auto;
+        max-height: none;
     }
 
     .achievements-carousel {
@@ -992,7 +998,30 @@ p {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        min-height: auto;
+        max-height: none;
+    }
+    
+    .project-content {
+        padding: 1rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
     }
 }
 
