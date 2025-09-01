@@ -488,6 +488,82 @@ p {
     background-color: var(--background);
 }
 
+/* Education Section */
+.education {
+    padding: 6rem 0;
+    background-color: var(--secondary);
+}
+
+.education .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.education-item {
+    background-color: var(--background);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.education-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-hover);
+}
+
+.education-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.education-icon i {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.education-item h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.education-institution {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.education-duration {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.education-cgpa {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 /* Presentations Section */
 .presentations {
     padding: 6rem 0;
@@ -958,6 +1034,11 @@ p {
         grid-template-columns: 1fr;
     }
 
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .presentation-item {
         flex-direction: column;
         text-align: center;
@@ -995,6 +1076,10 @@ p {
     .profile-img {
         width: 200px;
         height: 200px;
+    }
+
+    .education-item {
+        padding: 1.5rem;
     }
 
     .projects-grid {
