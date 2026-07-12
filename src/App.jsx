@@ -259,6 +259,7 @@ function App() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    const formElement = event.currentTarget;
     setFormState({ status: 'idle', message: '' });
 
     const formData = new FormData(event.currentTarget);
@@ -311,7 +312,7 @@ function App() {
         status: 'success',
         message: 'Your message was sent successfully. I will get back to you soon.',
       });
-      event.currentTarget.reset();
+      formElement.reset();
     } catch (error) {
       setFormState({
         status: 'error',
