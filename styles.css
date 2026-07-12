@@ -29,6 +29,29 @@ body {
     overflow-x: hidden;
 }
 
+#root {
+    min-height: 100vh;
+}
+
+section[id] {
+    scroll-margin-top: 96px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 12px;
+    padding: 0.75rem 1rem;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 999px;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 12px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -143,6 +166,14 @@ p {
     color: var(--primary);
 }
 
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -162,6 +193,9 @@ p {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .bar {
@@ -433,6 +467,12 @@ p {
     background-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+}
+
+.project-link-disabled {
+    border-style: dashed;
+    opacity: 0.75;
+    pointer-events: none;
 }
 
 /* Achievements Section */
@@ -856,6 +896,25 @@ p {
     border-radius: 16px;
 }
 
+.contact-form button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.form-status {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-status-success {
+    color: #1f7a4c;
+}
+
+.form-status-error {
+    color: #b42318;
+}
+
 .form-group {
     position: relative;
     margin-bottom: 2rem;
@@ -870,6 +929,11 @@ p {
     background-color: var(--secondary);
     font-size: 1rem;
     transition: var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: transparent;
 }
 
 .form-group input:focus,
@@ -966,6 +1030,27 @@ p {
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s steps(40, end);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+    transition: var(--transition);
+}
+
+.scroll-to-top:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
 }
 
 

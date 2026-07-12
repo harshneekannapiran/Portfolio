@@ -31,11 +31,24 @@
 
 ## 📱 Test Your Site
 
-- Open on mobile, tablet, and desktop
-- Check all sections load properly
-- Test contact form
-- Verify smooth scrolling
-- Ensure responsive design works
+
+## ▲ Vercel Deployment
+
+1. Install the Vercel CLI if you do not have it already:
+	- `npm i -g vercel`
+2. Sign in:
+	- `vercel login`
+3. Deploy from this folder:
+	- `vercel`
+4. Add these environment variables in the Vercel project settings:
+	- `SMTP_HOST`
+	- `SMTP_PORT`
+	- `SMTP_USER`
+	- `SMTP_PASS`
+	- `CONTACT_TO_EMAIL`
+	- `CONTACT_FROM_EMAIL`
+5. Publish production:
+	- `vercel --prod`
 
 ## ✏️ Customize Before Deploying
 
